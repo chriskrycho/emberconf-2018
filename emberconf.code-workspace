@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": ".",
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"emberjs.emberjs"
+		]
+	},
+	"settings": {
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"node_modules": true,
+			"tmp": true,
+			"dist": true
+		}
+	}
+}
