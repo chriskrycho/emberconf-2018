@@ -9,25 +9,21 @@ import { alias } from '@ember-decorators/object/computed';
 
 import Repo from 'todomvc/services/repo';
 import { Todo } from 'todomvc/todo';
-
-enum KeyboardCode {
-  Enter = 'Enter',
-  Esc = 'Escape'
-}
+import { KeyboardCode } from 'todomvc/keyboard';
 
 type InputEvent = KeyboardEvent & { target: HTMLInputElement };
 
 @tagName('li')
 export default class TodoItem extends Component {
-  onStartEdit: () => void;
-  onEndEdit: () => void;
-  todo: Todo;
+  onStartEdit!: () => void;
+  onEndEdit!: () => void;
+  todo!: Todo;
 
-  @service repo: Repo;
+  @service repo!: Repo;
 
   @className('todo.completed')
   @alias('todo.completed')
-  completed: boolean;
+  completed!: boolean;
 
   @className editing = false;
 
@@ -74,7 +70,9 @@ export default class TodoItem extends Component {
   }
 
   focusInput() {
-    const el: HTMLElement = this.element.querySelector('input.edit');
-    el.focus();
+    const el: HTMLElement | null = this.element.querySelector('input.edit');
+    if (el) {
+      el.focus();
+    }
   }
 }

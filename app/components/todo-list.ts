@@ -9,16 +9,16 @@ import Todo from '../todo';
 
 @tagName('section')
 export default class TodoList extends Component {
-  todos: Todo[];
+  todos!: Todo[];
 
-  @service() repo: Repo;
+  @service repo!: Repo;
 
   canToggle = true;
   elementId = 'main';
 
   @computed('todos.@each.completed')
   get allCompleted() {
-    return this.todos.isEvery('completed');
+    return this.todos.isEvery('completed', true);
   }
 
   @action
@@ -33,7 +33,8 @@ export default class TodoList extends Component {
 
   @action
   toggleAll() {
-    this.todos.forEach(todo => set(todo, 'completed', !this.allCompleted));
+    const allCompleted = this.allCompleted;
+    this.todos.forEach(todo => set(todo, 'completed', !allCompleted));
     this.repo.persist();
   }
 }
