@@ -10,6 +10,7 @@ import { alias } from '@ember-decorators/object/computed';
 import Repo from 'todomvc/services/repo';
 import { Todo } from 'todomvc/todo';
 import { KeyboardCode } from 'todomvc/keyboard';
+import { Maybe } from 'true-myth';
 
 type InputEvent = KeyboardEvent & { target: HTMLInputElement };
 
@@ -70,9 +71,11 @@ export default class TodoItem extends Component {
   }
 
   focusInput() {
-    const el: HTMLElement | null = this.element.querySelector('input.edit');
-    if (el) {
-      el.focus();
-    }
+    Maybe.of(this.element.querySelector('input.edit') as HTMLElement).match({
+      Just: el => {
+        el.focus();
+      },
+      Nothing: () => {}
+    });
   }
 }
