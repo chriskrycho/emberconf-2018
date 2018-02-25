@@ -17,6 +17,14 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "@ember-decorators/babel-transforms": "^2.0.0",
+    "@ember-decorators/controller": "^2.0.0-beta.2",
+    "@ember-decorators/object": "^2.0.0-beta.2",
+    "@ember-decorators/service": "^2.0.0-beta.2",
+    "@types/ember": "^2.8.15",
+    "@types/ember-test-helpers": "^0.7.1",
+    "@types/ember-testing-helpers": "^0.0.3",
+    "@types/rsvp": "^4.0.1",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.1.0-beta.1",
@@ -30,16 +38,20 @@
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
+    "ember-cli-typescript": "1.1.6",
     "ember-cli-uglify": "^2.0.0",
     "ember-cli-update": "^0.14.0",
+    "ember-decorators": "2.0.0-beta.1",
     "ember-export-application-global": "^2.0.0",
     "ember-inflector": "1.9.6",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~3.1.0-beta.1",
+    "ember-source": "~3.1.0-beta.3",
     "eslint-plugin-ember": "^5.0.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "true-myth": "^1.2.0",
+    "typescript": "^2.7.2"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
