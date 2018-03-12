@@ -2,6 +2,8 @@
 
 Let's learn how to use TypeScript in an Ember.js app!
 
+Slides from the workshop are available [here](https://github.com/chriskrycho/emberconf-slides).
+
 ## Prep
 
 To make the workshop go as smoothly as possible and avoid as many hiccups as we can (especially given that conference WiFi can be spotty!), we have a few requests for some ahead-of-time setup!
